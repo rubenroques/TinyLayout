@@ -6,7 +6,6 @@ With TinyLayout you can stop doing this:
 
 ```swift
 let superview = self.view
-
 let view = UIView()
 view.setTranslatesAutoresizingMaskIntoConstraints(false)
 view.backgroundColor = UIColor.lightGrayColor()
