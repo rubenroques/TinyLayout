@@ -1,5 +1,5 @@
 //
-//  UIView+Tiny.swift
+//  UIViewTinyLayout.swift
 //  TinyLayoutDemo
 //
 //  Created by Ruben Roques on 01/02/15.
@@ -11,7 +11,7 @@ import UIKit
 
 extension UIView {
 
-    func tl_constraints(fixedOnAttribute attribute:NSLayoutAttribute, highPriorityOnly:Bool = false) -> [NSLayoutConstraint] {
+    func tl_constraints(fixedOnAttribute attribute:NSLayoutAttribute) -> [NSLayoutConstraint] {
 
         var constraintsArray : [NSLayoutConstraint] = []
 
@@ -22,14 +22,6 @@ extension UIView {
                 }
             }
         }
-
-        /*
-        if highPriorityOnly
-        {
-        var constraintsArraySorted : [NSLayoutConstraint] = constraintsArray.sort{ $0.priority < $1.priority}
-        return
-        }
-        */
 
         return constraintsArray
     }
