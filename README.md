@@ -42,11 +42,11 @@ To use ```TinyLayout``` in your project you just need to drag TinyLayout folder 
 
 
 ## Usage
-####Initialization
 ```swift
 //Create a NSLayoutConstraint variable
 let layoutConstraint = (view,.Top)|=|&(superview,.Top)
 ```
+
 ```swift
 //Add a NSLayoutConstraint to the view.superview
 (view,.Top)|=|(superview,.Top)
