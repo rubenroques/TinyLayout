@@ -1,6 +1,6 @@
 # TinyLayout
 
-[![Twitter: @Rubn_Rocks](https://img.shields.io/badge/contact-@RubnRocks-blue.svg?style=flat)](https://twitter.com/rubn_rocks)
+[![Twitter: @Rubn_Rocks](https://img.shields.io/badge/contact-@RubnRocks-blue.svg?style=flat)](http://goo.gl/lepedg)
 
 The most brief and readable way to declare or apply a NSLayoutConstraint in Swift.
 
