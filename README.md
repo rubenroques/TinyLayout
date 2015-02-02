@@ -63,9 +63,13 @@ let layoutConstraint = (view,.Top)|=|&(superview,.Top)
 
 
 ---
-## License
-This project is licensed under the terms of the MIT license. See the LICENSE file.
+## Bugs? What bugs!?
+If you find any technical problem with TinyLayout, submit an issue.
 
 ---
-# Contributing
+## Contributing
 TinyLayout it's completely open to new ideas and suggestions. Create an issue and let me know what you have in mind.
+
+---
+## License
+This project is licensed under the terms of the MIT license. See the LICENSE file.
