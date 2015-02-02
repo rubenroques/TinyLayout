@@ -26,18 +26,38 @@ superview.addSubview(view)
 (view,.Top)|=|(superview,.Top)
 ```
 ---
-## Getting Started
+## Integration
+
+####Carthage
+
+####Manually
+To use ```TinyLayout``` in your project you can drag TinyLayout folder to the project tree.
 
 
 ## Usage
-
+####Initialization
+```swift
+//Create a NSLayoutConstraint variable
+let layoutConstraint = (view,.Top)|=|&(superview,.Top)
+```
+```swift
+//Add a NSLayoutConstraint to the view.superview
+(view,.Top)|=|(superview,.Top)
+```
 
 ---
 ## Roadmap
+1. Finish [Roadmap](#roadmap) 
+2. Create ```typealias``` to avoid repeat the long tupples used in the functions parameter names.
+3. Add support to fallback constrains using an array of UIView ```(view,.Top)|=|([superview, labelA, labelB],.Top)```
+4. Create func to set the NSLayoutConstraint priority in the declaration
+5. Migrate from UIView to AnyObject
 
 
 ---
 ## License
 This project is licensed under the terms of the MIT license. See the LICENSE file.
 
-
+---
+# Contributing
+TinyLayout it's completely open to new ideas and suggestions. Create an issue and let me know what you have in mind.
