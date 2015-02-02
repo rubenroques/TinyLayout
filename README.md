@@ -56,10 +56,11 @@ let layoutConstraint = (view,.Top)|=|&(superview,.Top)
 ## Roadmap
 1. Finish [Roadmap](#roadmap)  :)
 2. ["You should be testing your library."] (http://guides.cocoapods.org/making/using-pod-lib-create.html#choosing-a-test-framework)
-3. Create ```typealias``` to avoid repeat the long tupples used in the functions parameter names.
-4. Add support to fallback constrains using an array of UIView ```(view,.Top)|=|([superview, labelA, labelB],.Top)```
-5. Create func to set the NSLayoutConstraint priority in the declaration
-6. Migrate from UIView to AnyObject
+3. Create a ```typealias``` to avoid repeat the long tupples used in the functions parameter names
+4. Improve demo app
+5. Add support to fallback constrains using an array of UIView ```(view,.Top)|=|([superview, labelA, labelB],.Top)```
+6. Create func to set the NSLayoutConstraint priority in the declaration
+7. Migrate from UIView to AnyObject
 
 
 ---
