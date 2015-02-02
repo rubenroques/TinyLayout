@@ -87,18 +87,18 @@ public func >=| (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView
 }
 
 infix operator >=|& { associativity left }
-public func >=|& (right:(view:UIView, attri:NSLayoutAttribute), constant: CGFloat) -> NSLayoutConstraint {
+public func >=|& (right:(view:UIView, attri:NSLayoutAttribute), constant: CGFloat) -> NSLayoutConstraint? {
     return (right.view, right.attri) >=|& (nil, NSLayoutAttribute.NotAnAttribute, 1,constant)
 }
 
-public func >=|& (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView?, attri:NSLayoutAttribute)) -> NSLayoutConstraint {
+public func >=|& (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView?, attri:NSLayoutAttribute)) -> NSLayoutConstraint? {
     return (right.view, right.attri) >=|& (left.view, left.attri, 1,0)
 }
 
-public func >=|& (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView?, attri:NSLayoutAttribute, constant: CGFloat)) -> NSLayoutConstraint {
+public func >=|& (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView?, attri:NSLayoutAttribute, constant: CGFloat)) -> NSLayoutConstraint? {
     return (right.view, right.attri) >=|& (left.view, left.attri, 1,left.constant)
 }
-public func >=|& (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView?, attri:NSLayoutAttribute, multiplier: CGFloat, constant:CGFloat)) -> NSLayoutConstraint {
+public func >=|& (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView?, attri:NSLayoutAttribute, multiplier: CGFloat, constant:CGFloat)) -> NSLayoutConstraint? {
 
     right.view.setTranslatesAutoresizingMaskIntoConstraints(false)
 
@@ -134,18 +134,18 @@ public func <=| (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView
 }
 
 infix operator <=|& { associativity left }
-public func <=|& (right:(view:UIView, attri:NSLayoutAttribute), constant: CGFloat) -> NSLayoutConstraint {
+public func <=|& (right:(view:UIView, attri:NSLayoutAttribute), constant: CGFloat) -> NSLayoutConstraint? {
     return (right.view, right.attri) <=|& (nil, NSLayoutAttribute.NotAnAttribute, 1,constant)
 }
 
-public func <=|& (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView?, attri:NSLayoutAttribute)) -> NSLayoutConstraint {
+public func <=|& (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView?, attri:NSLayoutAttribute)) -> NSLayoutConstraint? {
     return (right.view, right.attri) <=|& (left.view, left.attri, 1,0)
 }
 
-public func <=|& (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView?, attri:NSLayoutAttribute, constant: CGFloat)) -> NSLayoutConstraint {
+public func <=|& (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView?, attri:NSLayoutAttribute, constant: CGFloat)) -> NSLayoutConstraint? {
     return (right.view, right.attri) <=|& (left.view, left.attri, 1,left.constant)
 }
-public func <=|& (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView?, attri:NSLayoutAttribute, multiplier: CGFloat, constant:CGFloat)) -> NSLayoutConstraint {
+public func <=|& (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView?, attri:NSLayoutAttribute, multiplier: CGFloat, constant:CGFloat)) -> NSLayoutConstraint? {
 
     right.view.setTranslatesAutoresizingMaskIntoConstraints(false)
 
