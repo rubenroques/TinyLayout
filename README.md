@@ -26,12 +26,19 @@ superview.addSubview(view)
 (view,.Top)|=|(superview,.Top)
 ```
 ---
+
+
 ## Integration
 
-####Carthage
+#### Carthage
+(to do)
 
-####Manually
-To use ```TinyLayout``` in your project you can drag TinyLayout folder to the project tree.
+#### CocoaPods 
+(pre-released version)
+(to do)
+
+#### Manually
+To use ```TinyLayout``` in your project you just need to drag TinyLayout folder to the project tree.
 
 
 ## Usage
@@ -47,7 +54,7 @@ let layoutConstraint = (view,.Top)|=|&(superview,.Top)
 
 ---
 ## Roadmap
-1. Finish [Roadmap](#roadmap) 
+1. Finish [Roadmap](#roadmap)  :)
 2. Create ```typealias``` to avoid repeat the long tupples used in the functions parameter names.
 3. Add support to fallback constrains using an array of UIView ```(view,.Top)|=|([superview, labelA, labelB],.Top)```
 4. Create func to set the NSLayoutConstraint priority in the declaration
