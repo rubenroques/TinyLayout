@@ -10,7 +10,6 @@
 		452C8A1C1A7E4C9100DC330E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452C8A151A7E4C9100DC330E /* AppDelegate.swift */; };
 		452C8A1D1A7E4C9100DC330E /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452C8A171A7E4C9100DC330E /* DemoViewController.swift */; };
 		452C8A1E1A7E4C9100DC330E /* TinyLayoutDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452C8A191A7E4C9100DC330E /* TinyLayoutDemoView.swift */; };
-		452C8A1F1A7E4C9100DC330E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 452C8A1B1A7E4C9100DC330E /* Info.plist */; };
 		452C8A241A7E4CCA00DC330E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 452C8A231A7E4CCA00DC330E /* Images.xcassets */; };
 		452C8A2B1A7E4DB000DC330E /* TinyLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452C8A291A7E4DB000DC330E /* TinyLayout.swift */; };
 		452C8A2C1A7E4DB000DC330E /* UIViewTinyLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452C8A2A1A7E4DB000DC330E /* UIViewTinyLayout.swift */; };
@@ -181,7 +180,6 @@
 			files = (
 				452C8A2F1A7E508800DC330E /* Main.storyboard in Resources */,
 				452C8A241A7E4CCA00DC330E /* Images.xcassets in Resources */,
-				452C8A1F1A7E4C9100DC330E /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
