@@ -11,51 +11,51 @@ import UIKit
 
 
 infix operator |=| { associativity right precedence 90 }
-public func |=| (right:(view:UIView, attri:NSLayoutAttribute), constant: CGFloat) {
-    (right.view, right.attri) |=| (nil, NSLayoutAttribute.NotAnAttribute, 1,constant)
+public func |=| (left:(view:UIView, attri:NSLayoutAttribute), constant: CGFloat) {
+    (left.view, left.attri) |=| (nil, NSLayoutAttribute.NotAnAttribute, 1,constant)
 }
 
-public func |=| (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView?, attri:NSLayoutAttribute)) {
-    (right.view, right.attri) |=| (left.view, left.attri, 1,0)
+public func |=| (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView?, attri:NSLayoutAttribute)) {
+    (left.view, left.attri) |=| (right.view, right.attri, 1,0)
 }
 
-public func |=| (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView?, attri:NSLayoutAttribute, constant: CGFloat)) {
-    (right.view, right.attri) |=| (left.view, left.attri, 1,left.constant)
+public func |=| (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView?, attri:NSLayoutAttribute, constant: CGFloat)) {
+    (left.view, left.attri) |=| (right.view, right.attri, 1,right.constant)
 }
 
-public func |=| (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView?, attri:NSLayoutAttribute, multiplier: CGFloat, constant:CGFloat)) {
+public func |=| (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView?, attri:NSLayoutAttribute, multiplier: CGFloat, constant:CGFloat)) {
 
-    if right.view.superview == nil {
+    if left.view.superview == nil {
         return
     }
 
-    right.view.setTranslatesAutoresizingMaskIntoConstraints(false)
+    left.view.setTranslatesAutoresizingMaskIntoConstraints(false)
 
-    right.view.superview!.addConstraint(NSLayoutConstraint(item: right.view, attribute: right.attri, relatedBy: .Equal, toItem: left.view, attribute: left.attri, multiplier: left.multiplier, constant: left.constant))
+    left.view.superview!.addConstraint(NSLayoutConstraint(item: left.view, attribute: left.attri, relatedBy: .Equal, toItem: right.view, attribute: right.attri, multiplier: right.multiplier, constant: right.constant))
 }
 
 
-infix operator |=|& { associativity left }
-public func |=|& (right:(view:UIView, attri:NSLayoutAttribute), constant: CGFloat) -> NSLayoutConstraint? {
-    return (right.view, right.attri) |=|& (nil, NSLayoutAttribute.NotAnAttribute, 1,constant)
+infix operator |=|& { associativity right precedence 90 }
+public func |=|& (left:(view:UIView, attri:NSLayoutAttribute), constant: CGFloat) -> NSLayoutConstraint? {
+    return (left.view, left.attri) |=|& (nil, NSLayoutAttribute.NotAnAttribute, 1,constant)
 }
 
-public func |=|& (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView?, attri:NSLayoutAttribute)) -> NSLayoutConstraint? {
-    return (right.view, right.attri) |=|& (left.view, left.attri, 1,0)
+public func |=|& (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView?, attri:NSLayoutAttribute)) -> NSLayoutConstraint? {
+    return (left.view, left.attri) |=|& (right.view, right.attri, 1,0)
 }
 
-public func |=|& (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView?, attri:NSLayoutAttribute, constant: CGFloat)) -> NSLayoutConstraint? {
-    return (right.view, right.attri) |=|& (left.view, left.attri, 1,left.constant)
+public func |=|& (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView?, attri:NSLayoutAttribute, constant: CGFloat)) -> NSLayoutConstraint? {
+    return (left.view, left.attri) |=|& (right.view, right.attri, 1,right.constant)
 }
-public func |=|& (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView?, attri:NSLayoutAttribute, multiplier: CGFloat, constant:CGFloat)) -> NSLayoutConstraint? {
+public func |=|& (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView?, attri:NSLayoutAttribute, multiplier: CGFloat, constant:CGFloat)) -> NSLayoutConstraint? {
 
-    if (right.view.superview == nil) {
+    if (left.view.superview == nil) {
         return nil
     }
-    
-    right.view.setTranslatesAutoresizingMaskIntoConstraints(false)
 
-    return NSLayoutConstraint(item: right.view, attribute: right.attri, relatedBy: .Equal, toItem: left.view, attribute: left.attri, multiplier: left.multiplier, constant: left.constant)
+    left.view.setTranslatesAutoresizingMaskIntoConstraints(false)
+
+    return NSLayoutConstraint(item: left.view, attribute: left.attri, relatedBy: .Equal, toItem: right.view, attribute: right.attri, multiplier: right.multiplier, constant: right.constant)
 }
 
 
@@ -64,92 +64,92 @@ public func |=|& (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIVie
 
 
 
-infix operator >=| { associativity left }
-public func >=| (right:(view:UIView, attri:NSLayoutAttribute), constant: CGFloat) {
-    (right.view, right.attri) >=| (nil, NSLayoutAttribute.NotAnAttribute, 1,constant)
+infix operator >=| { associativity right precedence 90 }
+public func >=| (left:(view:UIView, attri:NSLayoutAttribute), constant: CGFloat) {
+    (left.view, left.attri) >=| (nil, NSLayoutAttribute.NotAnAttribute, 1,constant)
 }
 
-public func >=| (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView?, attri:NSLayoutAttribute)) {
-    (right.view, right.attri) >=| (left.view, left.attri, 1,0)
+public func >=| (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView?, attri:NSLayoutAttribute)) {
+    (left.view, left.attri) >=| (right.view, right.attri, 1,0)
 }
 
-public func >=| (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView?, attri:NSLayoutAttribute, constant: CGFloat)) {
-    (right.view, right.attri) >=| (left.view, left.attri, 1,left.constant)
+public func >=| (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView?, attri:NSLayoutAttribute, constant: CGFloat)) {
+    (left.view, left.attri) >=| (right.view, right.attri, 1,right.constant)
 }
 
-public func >=| (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView?, attri:NSLayoutAttribute, multiplier: CGFloat, constant:CGFloat)) {
+public func >=| (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView?, attri:NSLayoutAttribute, multiplier: CGFloat, constant:CGFloat)) {
 
-    if right.view.superview == nil {
+    if left.view.superview == nil {
         return
     }
 
-    right.view.superview!.addConstraint(NSLayoutConstraint(item: right.view, attribute: right.attri, relatedBy: .GreaterThanOrEqual, toItem: left.view, attribute: left.attri, multiplier: left.multiplier, constant: left.constant))
+    left.view.superview!.addConstraint(NSLayoutConstraint(item: left.view, attribute: left.attri, relatedBy: .GreaterThanOrEqual, toItem: right.view, attribute: right.attri, multiplier: right.multiplier, constant: right.constant))
 }
 
-infix operator >=|& { associativity left }
-public func >=|& (right:(view:UIView, attri:NSLayoutAttribute), constant: CGFloat) -> NSLayoutConstraint? {
-    return (right.view, right.attri) >=|& (nil, NSLayoutAttribute.NotAnAttribute, 1,constant)
+infix operator >=|& { associativity right precedence 90 }
+public func >=|& (left:(view:UIView, attri:NSLayoutAttribute), constant: CGFloat) -> NSLayoutConstraint? {
+    return (left.view, left.attri) >=|& (nil, NSLayoutAttribute.NotAnAttribute, 1,constant)
 }
 
-public func >=|& (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView?, attri:NSLayoutAttribute)) -> NSLayoutConstraint? {
-    return (right.view, right.attri) >=|& (left.view, left.attri, 1,0)
+public func >=|& (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView?, attri:NSLayoutAttribute)) -> NSLayoutConstraint? {
+    return (left.view, left.attri) >=|& (right.view, right.attri, 1,0)
 }
 
-public func >=|& (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView?, attri:NSLayoutAttribute, constant: CGFloat)) -> NSLayoutConstraint? {
-    return (right.view, right.attri) >=|& (left.view, left.attri, 1,left.constant)
+public func >=|& (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView?, attri:NSLayoutAttribute, constant: CGFloat)) -> NSLayoutConstraint? {
+    return (left.view, left.attri) >=|& (right.view, right.attri, 1,right.constant)
 }
-public func >=|& (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView?, attri:NSLayoutAttribute, multiplier: CGFloat, constant:CGFloat)) -> NSLayoutConstraint? {
+public func >=|& (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView?, attri:NSLayoutAttribute, multiplier: CGFloat, constant:CGFloat)) -> NSLayoutConstraint? {
 
-    right.view.setTranslatesAutoresizingMaskIntoConstraints(false)
+    left.view.setTranslatesAutoresizingMaskIntoConstraints(false)
 
-    return NSLayoutConstraint(item: right.view, attribute: right.attri, relatedBy: .GreaterThanOrEqual, toItem: left.view, attribute: left.attri, multiplier: left.multiplier, constant: left.constant)
-}
-
-
-
-
-
-
-
-infix operator <=| { associativity left }
-public func <=| (right:(view:UIView, attri:NSLayoutAttribute), constant: CGFloat) {
-    (right.view, right.attri) <=| (nil, NSLayoutAttribute.NotAnAttribute, 1,constant)
+    return NSLayoutConstraint(item: left.view, attribute: left.attri, relatedBy: .GreaterThanOrEqual, toItem: right.view, attribute: right.attri, multiplier: right.multiplier, constant: right.constant)
 }
 
-public func <=| (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView?, attri:NSLayoutAttribute)) {
-    (right.view, right.attri) <=| (left.view, left.attri, 1,0)
+
+
+
+
+
+
+infix operator <=| { associativity right precedence 90 }
+public func <=| (left:(view:UIView, attri:NSLayoutAttribute), constant: CGFloat) {
+    (left.view, left.attri) <=| (nil, NSLayoutAttribute.NotAnAttribute, 1,constant)
 }
 
-public func <=| (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView?, attri:NSLayoutAttribute, constant: CGFloat)) {
-    (right.view, right.attri) <=| (left.view, left.attri, 1,left.constant)
+public func <=| (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView?, attri:NSLayoutAttribute)) {
+    (left.view, left.attri) <=| (right.view, right.attri, 1,0)
 }
 
-public func <=| (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView?, attri:NSLayoutAttribute, multiplier: CGFloat, constant:CGFloat)) {
+public func <=| (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView?, attri:NSLayoutAttribute, constant: CGFloat)) {
+    (left.view, left.attri) <=| (right.view, right.attri, 1,right.constant)
+}
 
-    if right.view.superview == nil {
+public func <=| (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView?, attri:NSLayoutAttribute, multiplier: CGFloat, constant:CGFloat)) {
+
+    if left.view.superview == nil {
         return
     }
 
-    right.view.superview!.addConstraint(NSLayoutConstraint(item: right.view, attribute: right.attri, relatedBy: .LessThanOrEqual, toItem: left.view, attribute: left.attri, multiplier: left.multiplier, constant: left.constant))
+    left.view.superview!.addConstraint(NSLayoutConstraint(item: left.view, attribute: left.attri, relatedBy: .LessThanOrEqual, toItem: right.view, attribute: right.attri, multiplier: right.multiplier, constant: right.constant))
 }
 
-infix operator <=|& { associativity left }
-public func <=|& (right:(view:UIView, attri:NSLayoutAttribute), constant: CGFloat) -> NSLayoutConstraint? {
-    return (right.view, right.attri) <=|& (nil, NSLayoutAttribute.NotAnAttribute, 1,constant)
+infix operator <=|& { associativity right precedence 90 }
+public func <=|& (left:(view:UIView, attri:NSLayoutAttribute), constant: CGFloat) -> NSLayoutConstraint? {
+    return (left.view, left.attri) <=|& (nil, NSLayoutAttribute.NotAnAttribute, 1,constant)
 }
 
-public func <=|& (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView?, attri:NSLayoutAttribute)) -> NSLayoutConstraint? {
-    return (right.view, right.attri) <=|& (left.view, left.attri, 1,0)
+public func <=|& (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView?, attri:NSLayoutAttribute)) -> NSLayoutConstraint? {
+    return (left.view, left.attri) <=|& (right.view, right.attri, 1,0)
 }
 
-public func <=|& (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView?, attri:NSLayoutAttribute, constant: CGFloat)) -> NSLayoutConstraint? {
-    return (right.view, right.attri) <=|& (left.view, left.attri, 1,left.constant)
+public func <=|& (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView?, attri:NSLayoutAttribute, constant: CGFloat)) -> NSLayoutConstraint? {
+    return (left.view, left.attri) <=|& (right.view, right.attri, 1,right.constant)
 }
-public func <=|& (right:(view:UIView, attri:NSLayoutAttribute), left:(view:UIView?, attri:NSLayoutAttribute, multiplier: CGFloat, constant:CGFloat)) -> NSLayoutConstraint? {
+public func <=|& (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView?, attri:NSLayoutAttribute, multiplier: CGFloat, constant:CGFloat)) -> NSLayoutConstraint? {
 
-    right.view.setTranslatesAutoresizingMaskIntoConstraints(false)
+    left.view.setTranslatesAutoresizingMaskIntoConstraints(false)
 
-    return NSLayoutConstraint(item: right.view, attribute: right.attri, relatedBy: .LessThanOrEqual, toItem: left.view, attribute: left.attri, multiplier: left.multiplier, constant: left.constant)
+    return NSLayoutConstraint(item: left.view, attribute: left.attri, relatedBy: .LessThanOrEqual, toItem: right.view, attribute: right.attri, multiplier: right.multiplier, constant: right.constant)
 }
 
 
