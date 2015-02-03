@@ -87,7 +87,6 @@ class TinyLayoutDemoView:UIView {
 
         (labelB, .Width)<=|(labelA, .Width)
 
-        self.addConstraint((labelD, .Left)|=|&(labelA, .Left,1,10))
         var constr = (labelD, .Left)|=|&(labelA, .Left,1,10)
 
         self.layoutIfNeeded()
