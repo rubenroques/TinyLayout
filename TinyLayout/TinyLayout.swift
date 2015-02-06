@@ -82,7 +82,9 @@ public func >=| (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView
     if left.view.superview == nil {
         return
     }
-
+    
+    left.view.setTranslatesAutoresizingMaskIntoConstraints(false)
+    
     left.view.superview!.addConstraint(NSLayoutConstraint(item: left.view, attribute: left.attri, relatedBy: .GreaterThanOrEqual, toItem: right.view, attribute: right.attri, multiplier: right.multiplier, constant: right.constant))
 }
 
@@ -129,7 +131,9 @@ public func <=| (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView
     if left.view.superview == nil {
         return
     }
-
+    
+    left.view.setTranslatesAutoresizingMaskIntoConstraints(false)
+    
     left.view.superview!.addConstraint(NSLayoutConstraint(item: left.view, attribute: left.attri, relatedBy: .LessThanOrEqual, toItem: right.view, attribute: right.attri, multiplier: right.multiplier, constant: right.constant))
 }
 
