@@ -83,7 +83,7 @@ let layoutConstraintLeft = (view,.Left)|=|&(superview,.Left, 2, -100)
 4. Improve demo app
 5. Add support to fallback constrains using an array of UIView ```(view,.Top)|=|([superview, labelA, labelB],.Top)```
 6. Create func to set the NSLayoutConstraint priority in the declaration
-7. Migrate from UIView to AnyObject
+7. Migrate from UIView to View to add support for AppKit
 
 
 ---
