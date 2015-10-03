@@ -41,39 +41,39 @@ github "rubenroques/TinyLayout"
 ## Usage
 **The simplest version, without multipliers or constraints.**
 ```swift
-//Create a NSLayoutConstraint variable
-let layoutConstraint = (view,.Top)|=|&(superview,.Top)
-```
-```swift
 //Add a NSLayoutConstraint to the view.superview
 (view,.Top)|=|(superview,.Top)
+```
+```swift
+//Create a NSLayoutConstraint variable
+let layoutConstraint = (view,.Top)|=|&(superview,.Top)
 ```
 The default values are ```constant = 0``` and ```multiplier = 1```.
 
 **With a constant value.**
 ```swift
-//Create a NSLayoutConstraint variable
-let layoutConstraintTop = (view,.Top)|=|&(superview,.Top, 50)
-let layoutConstraintLeft = (view,.Left)|=|&(superview,.Left, -100)
-```
-```swift
 //Add a NSLayoutConstraint to the view.superview
 (view,.Top)|=|(superview,.Top, 50)
 (view,.Left)|=|(superview,.Left, -100)
 ```
-
-**With a constant value and a multiplier.**
 ```swift
 //Create a NSLayoutConstraint variable
-let layoutConstraintTop = (view,.Top)|=|&(superview,.Top, 1.2, 50)
-let layoutConstraintLeft = (view,.Left)|=|&(superview,.Left, 2, -100)
+let layoutConstraintTop = (view,.Top)|=|&(superview,.Top, 50)
+let layoutConstraintLeft = (view,.Left)|=|&(superview,.Left, -100)
 ```
+
+
+**With a constant value and a multiplier.**
 ```swift
 //Add a NSLayoutConstraint to the view.superview
 (view,.Top)|=|(superview,.Top, 1.2, 50)
 (view,.Left)|=|(superview,.Left, 2, -100)
 ```
-
+```swift
+//Create a NSLayoutConstraint variable
+let layoutConstraintTop = (view,.Top)|=|&(superview,.Top, 1.2, 50)
+let layoutConstraintLeft = (view,.Left)|=|&(superview,.Left, 2, -100)
+```
 
 ---
 ## Roadmap
