@@ -88,11 +88,11 @@ let layoutConstraintLeft = (view,.Left)|=|&(superview,.Left, 2, -100)
 
 ---
 ## Bugs?
-If you find any technical problem with TinyLayout, submit an issue.
+If you find any problem with TinyLayout, submit an issue.
 
 ---
 ## Contributing
-TinyLayout it's completely open to new ideas and suggestions. Create an issue and let me know what you have in mind.
+TinyLayout it's completely open to new ideas and suggestions. Create an issue and lets discuss what you have in mind.
 
 ---
 ## License
