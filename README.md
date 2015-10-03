@@ -3,7 +3,7 @@
 <!---[![Twitter: @Rubn_Rocks](https://img.shields.io/badge/contact-@RubnRocks-blue.svg?style=flat)](http://goo.gl/lepedg)--->
 [![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/rubenroques/TinyLayout/blob/master/LICENSE)
 
-The most brief and readable way to declare or apply a NSLayoutConstraint in Swift.
+A µframework with the purpose to be the most brief and readable way to declare or apply a AutoLayout NSLayoutConstraint in Swift.
 
 ## What can TinyLayout do for you?
 With TinyLayout you can stop doing this:
@@ -87,7 +87,7 @@ let layoutConstraintLeft = (view,.Left)|=|&(superview,.Left, 2, -100)
 
 
 ---
-## Bugs? What bugs!?
+## Bugs?
 If you find any technical problem with TinyLayout, submit an issue.
 
 ---
