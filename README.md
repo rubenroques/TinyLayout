@@ -40,7 +40,7 @@ github "rubenroques/TinyLayout"
 
 
 #### CocoaPods 
-(to do)
+
 
 
 ## Usage
