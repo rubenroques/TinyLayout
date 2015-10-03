@@ -11,29 +11,21 @@ import UIKit
 
 extension UIView {
 
-    func tl_constraints(fixedOnAttribute attribute:NSLayoutAttribute) -> [NSLayoutConstraint] {
-
+    func tl_constraints(withAttribute attribute:NSLayoutAttribute) -> [NSLayoutConstraint] {
         var constraintsArray : [NSLayoutConstraint] = []
-
-        for constraint in self.constraints()  {
-            if let constraintValue = constraint as? NSLayoutConstraint {
-                if constraintValue.firstAttribute == attribute {
-                    constraintsArray.append(constraintValue)
-                }
+        for constraint in self.constraints {
+            if constraint.firstAttribute == attribute {
+                constraintsArray.append(constraint)
             }
         }
-
         return constraintsArray
     }
 
-    func tl_constraints(fixedOnAttributes attributes:[NSLayoutAttribute]) -> [NSLayoutConstraint] {
-
+    func tl_constraints(withAttributes attributes:[NSLayoutAttribute]) -> [NSLayoutConstraint] {
         var constraintsArray : [NSLayoutConstraint] = []
-
         for attribute in attributes {
-            constraintsArray += self.tl_constraints(fixedOnAttribute: attribute)
+            constraintsArray += self.tl_constraints(withAttribute: attribute)
         }
-
         return constraintsArray
     }
 

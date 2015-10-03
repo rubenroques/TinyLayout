@@ -26,10 +26,10 @@ public func |=| (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView
 public func |=| (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView?, attri:NSLayoutAttribute, multiplier: CGFloat, constant:CGFloat)) {
 
     if left.view.superview == nil {
-        return
+        fatalError("Left side view does not have a superview")
     }
 
-    left.view.setTranslatesAutoresizingMaskIntoConstraints(false)
+    left.view.translatesAutoresizingMaskIntoConstraints = false
 
     left.view.superview!.addConstraint(NSLayoutConstraint(item: left.view, attribute: left.attri, relatedBy: .Equal, toItem: right.view, attribute: right.attri, multiplier: right.multiplier, constant: right.constant))
 }
@@ -50,10 +50,10 @@ public func |=|& (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIVie
 public func |=|& (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView?, attri:NSLayoutAttribute, multiplier: CGFloat, constant:CGFloat)) -> NSLayoutConstraint? {
 
     if (left.view.superview == nil) {
-        return nil
+        fatalError("Left side view does not have a superview")
     }
 
-    left.view.setTranslatesAutoresizingMaskIntoConstraints(false)
+    left.view.translatesAutoresizingMaskIntoConstraints = false
 
     return NSLayoutConstraint(item: left.view, attribute: left.attri, relatedBy: .Equal, toItem: right.view, attribute: right.attri, multiplier: right.multiplier, constant: right.constant)
 }
@@ -80,10 +80,10 @@ public func >=| (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView
 public func >=| (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView?, attri:NSLayoutAttribute, multiplier: CGFloat, constant:CGFloat)) {
 
     if left.view.superview == nil {
-        return
+        fatalError("Left side view does not have a superview")
     }
     
-    left.view.setTranslatesAutoresizingMaskIntoConstraints(false)
+    left.view.translatesAutoresizingMaskIntoConstraints = false
     
     left.view.superview!.addConstraint(NSLayoutConstraint(item: left.view, attribute: left.attri, relatedBy: .GreaterThanOrEqual, toItem: right.view, attribute: right.attri, multiplier: right.multiplier, constant: right.constant))
 }
@@ -102,7 +102,7 @@ public func >=|& (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIVie
 }
 public func >=|& (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView?, attri:NSLayoutAttribute, multiplier: CGFloat, constant:CGFloat)) -> NSLayoutConstraint? {
 
-    left.view.setTranslatesAutoresizingMaskIntoConstraints(false)
+    left.view.translatesAutoresizingMaskIntoConstraints = false
 
     return NSLayoutConstraint(item: left.view, attribute: left.attri, relatedBy: .GreaterThanOrEqual, toItem: right.view, attribute: right.attri, multiplier: right.multiplier, constant: right.constant)
 }
@@ -129,10 +129,10 @@ public func <=| (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView
 public func <=| (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView?, attri:NSLayoutAttribute, multiplier: CGFloat, constant:CGFloat)) {
 
     if left.view.superview == nil {
-        return
+        fatalError("Left side view does not have a superview")
     }
     
-    left.view.setTranslatesAutoresizingMaskIntoConstraints(false)
+    left.view.translatesAutoresizingMaskIntoConstraints = false
     
     left.view.superview!.addConstraint(NSLayoutConstraint(item: left.view, attribute: left.attri, relatedBy: .LessThanOrEqual, toItem: right.view, attribute: right.attri, multiplier: right.multiplier, constant: right.constant))
 }
@@ -151,7 +151,7 @@ public func <=|& (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIVie
 }
 public func <=|& (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView?, attri:NSLayoutAttribute, multiplier: CGFloat, constant:CGFloat)) -> NSLayoutConstraint? {
 
-    left.view.setTranslatesAutoresizingMaskIntoConstraints(false)
+    left.view.translatesAutoresizingMaskIntoConstraints = false
 
     return NSLayoutConstraint(item: left.view, attribute: left.attri, relatedBy: .LessThanOrEqual, toItem: right.view, attribute: right.attri, multiplier: right.multiplier, constant: right.constant)
 }

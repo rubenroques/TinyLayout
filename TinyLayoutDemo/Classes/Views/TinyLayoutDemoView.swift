@@ -24,38 +24,38 @@ class TinyLayoutDemoView:UIView {
     func setupDemoViews(){
 
         self.backgroundColor = UIColor.lightGrayColor()
-        self.setTranslatesAutoresizingMaskIntoConstraints(false)
+        self.translatesAutoresizingMaskIntoConstraints = false
 
 
-        var topImageView = UIImageView()
-        topImageView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        let topImageView = UIImageView()
+        topImageView.translatesAutoresizingMaskIntoConstraints = false
         topImageView.backgroundColor = UIColor.greenColor()
 
-        var labelA = UILabel()
-        labelA.setTranslatesAutoresizingMaskIntoConstraints(false)
+        let labelA = UILabel()
+        labelA.translatesAutoresizingMaskIntoConstraints = false
         labelA.backgroundColor = UIColor.grayColor()
         labelA.text = "Label A"
         labelA.tl_height(20)
 
 
-        var labelB = UILabel()
-        labelB.setTranslatesAutoresizingMaskIntoConstraints(false)
+        let labelB = UILabel()
+        labelB.translatesAutoresizingMaskIntoConstraints = false
         labelB.backgroundColor = UIColor.grayColor()
-        labelB.text = "Label B its a big label but cannot"
+        labelB.text = "Label B its a really big label"
         labelB.tl_height(20)
 
 
 
-        var labelC = UILabel()
-        labelC.setTranslatesAutoresizingMaskIntoConstraints(false)
+        let labelC = UILabel()
+        labelC.translatesAutoresizingMaskIntoConstraints = false
         labelC.backgroundColor = UIColor.grayColor()
         labelC.text = "Label C"
         labelC.tl_size(CGSize(width: 100, height: 20))
 
 
 
-        var labelD = UILabel()
-        labelD.setTranslatesAutoresizingMaskIntoConstraints(false)
+        let labelD = UILabel()
+        labelD.translatesAutoresizingMaskIntoConstraints = false
         labelD.backgroundColor = UIColor.grayColor()
         labelD.text = "Label D"
         labelD.tl_size(CGSize(width: 100, height: 20))
@@ -66,9 +66,6 @@ class TinyLayoutDemoView:UIView {
         self.addSubview(labelB)
         self.addSubview(labelC)
         self.addSubview(labelD)
-
-
-
 
 
 
@@ -86,8 +83,6 @@ class TinyLayoutDemoView:UIView {
         (labelA, .Width)|=|210
 
         (labelB, .Width)<=|(labelA, .Width)
-
-        var constr = (labelD, .Left)|=|&(labelA, .Left,1,10)
 
         self.layoutIfNeeded()
     }
