@@ -31,14 +31,17 @@ superview.addSubview(view)
 ## Integration
 
 #### Carthage
-(to do)
+If you’re using [Carthage](https://github.com/Carthage/Carthage), simply add
+TinyLayout to your `Cartfile`:
+
+```
+github "rubenroques/TinyLayout"
+```
+
 
 #### CocoaPods 
-(pre-released version)
 (to do)
 
-#### Manually
-To use ```TinyLayout``` in your project you just need to drag TinyLayout file to your project.
 
 ## Usage
 **The simplest version, without multipliers or constraints.**
