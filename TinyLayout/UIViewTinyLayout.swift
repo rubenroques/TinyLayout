@@ -29,15 +29,15 @@ extension UIView {
         return constraintsArray
     }
 
-    func tl_width(width: CGFloat) {
+    func tl_setWidth(width: CGFloat) {
         self.addConstraint(NSLayoutConstraint(item: self, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: width))
     }
 
-    func tl_height(height: CGFloat) {
+    func tl_setHeight(height: CGFloat) {
         self.addConstraint(NSLayoutConstraint(item: self, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: height))
     }
 
-    func tl_size(size: CGSize) {
+    func tl_setSize(size: CGSize) {
         self.addConstraint(NSLayoutConstraint(item: self, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: size.width))
         self.addConstraint(NSLayoutConstraint(item: self, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: size.height))
     }
