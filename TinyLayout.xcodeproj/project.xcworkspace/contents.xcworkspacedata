@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:TinyLayoutDemo.xcodeproj">
+      location = "self:TinyLayout.xcodeproj">
    </FileRef>
 </Workspace>
