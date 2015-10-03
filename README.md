@@ -38,11 +38,6 @@ TinyLayout to your `Cartfile`:
 github "rubenroques/TinyLayout"
 ```
 
-
-#### CocoaPods 
-
-
-
 ## Usage
 **The simplest version, without multipliers or constraints.**
 ```swift
