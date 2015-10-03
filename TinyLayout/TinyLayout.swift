@@ -15,6 +15,10 @@ public func |=| (left:(view:UIView, attri:NSLayoutAttribute), constant: CGFloat)
     (left.view, left.attri) |=| (nil, NSLayoutAttribute.NotAnAttribute, 1,constant)
 }
 
+public func |=| (left:(view:UIView, attri:NSLayoutAttribute), right:(multiplier: CGFloat, constant: CGFloat)) {
+    (left.view, left.attri) |=| (nil, NSLayoutAttribute.NotAnAttribute, right.multiplier, right.constant)
+}
+
 public func |=| (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView?, attri:NSLayoutAttribute)) {
     (left.view, left.attri) |=| (right.view, right.attri, 1,0)
 }
@@ -38,6 +42,10 @@ public func |=| (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView
 infix operator |=|& { associativity right precedence 90 }
 public func |=|& (left:(view:UIView, attri:NSLayoutAttribute), constant: CGFloat) -> NSLayoutConstraint? {
     return (left.view, left.attri) |=|& (nil, NSLayoutAttribute.NotAnAttribute, 1,constant)
+}
+
+public func |=|& (left:(view:UIView, attri:NSLayoutAttribute), right:(multiplier: CGFloat, constant: CGFloat)) -> NSLayoutConstraint? {
+    return (left.view, left.attri) |=|& (nil, NSLayoutAttribute.NotAnAttribute, right.multiplier, right.constant)
 }
 
 public func |=|& (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView?, attri:NSLayoutAttribute)) -> NSLayoutConstraint? {
@@ -69,6 +77,10 @@ public func >=| (left:(view:UIView, attri:NSLayoutAttribute), constant: CGFloat)
     (left.view, left.attri) >=| (nil, NSLayoutAttribute.NotAnAttribute, 1,constant)
 }
 
+public func >=| (left:(view:UIView, attri:NSLayoutAttribute), right:(multiplier: CGFloat, constant: CGFloat)) {
+    (left.view, left.attri) >=| (nil, NSLayoutAttribute.NotAnAttribute, right.multiplier, right.constant)
+}
+
 public func >=| (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView?, attri:NSLayoutAttribute)) {
     (left.view, left.attri) >=| (right.view, right.attri, 1,0)
 }
@@ -91,6 +103,10 @@ public func >=| (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView
 infix operator >=|& { associativity right precedence 90 }
 public func >=|& (left:(view:UIView, attri:NSLayoutAttribute), constant: CGFloat) -> NSLayoutConstraint? {
     return (left.view, left.attri) >=|& (nil, NSLayoutAttribute.NotAnAttribute, 1,constant)
+}
+
+public func >=|& (left:(view:UIView, attri:NSLayoutAttribute), right:(multiplier: CGFloat, constant: CGFloat)) -> NSLayoutConstraint? {
+    return (left.view, left.attri) >=|& (nil, NSLayoutAttribute.NotAnAttribute, right.multiplier, right.constant)
 }
 
 public func >=|& (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView?, attri:NSLayoutAttribute)) -> NSLayoutConstraint? {
@@ -118,6 +134,10 @@ public func <=| (left:(view:UIView, attri:NSLayoutAttribute), constant: CGFloat)
     (left.view, left.attri) <=| (nil, NSLayoutAttribute.NotAnAttribute, 1,constant)
 }
 
+public func <=| (left:(view:UIView, attri:NSLayoutAttribute), right:(multiplier: CGFloat, constant: CGFloat)) {
+    (left.view, left.attri) >=| (nil, NSLayoutAttribute.NotAnAttribute, right.multiplier, right.constant)
+}
+
 public func <=| (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView?, attri:NSLayoutAttribute)) {
     (left.view, left.attri) <=| (right.view, right.attri, 1,0)
 }
@@ -140,6 +160,10 @@ public func <=| (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView
 infix operator <=|& { associativity right precedence 90 }
 public func <=|& (left:(view:UIView, attri:NSLayoutAttribute), constant: CGFloat) -> NSLayoutConstraint? {
     return (left.view, left.attri) <=|& (nil, NSLayoutAttribute.NotAnAttribute, 1,constant)
+}
+
+public func <=|& (left:(view:UIView, attri:NSLayoutAttribute), right:(multiplier: CGFloat, constant: CGFloat)) -> NSLayoutConstraint? {
+    return (left.view, left.attri) <=|& (nil, NSLayoutAttribute.NotAnAttribute, right.multiplier, right.constant)
 }
 
 public func <=|& (left:(view:UIView, attri:NSLayoutAttribute), right:(view:UIView?, attri:NSLayoutAttribute)) -> NSLayoutConstraint? {
